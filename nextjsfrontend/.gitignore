@@ -1,0 +1,86 @@
+===============================================
+
+Next.js / Node.js
+
+===============================================
+
+Dependencies
+
+/node_modules
+/.pnp
+.pnp.js
+
+Next.js build output
+
+/.next/
+/out/
+/dist/
+
+Production build files
+
+/build/
+
+Testing and Coverage
+
+/coverage
+/.nyc_output
+/.cache
+/docs-build
+/storybook-static
+
+===============================================
+
+Environment Variables & Secrets
+
+===============================================
+
+Keep secret keys and local configs out of source control
+
+.env
+.env.local
+.env.development.local
+.env.production.local
+.env.staging.local
+
+===============================================
+
+Logs and Lockfiles
+
+===============================================
+
+Log files
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.log
+
+Lock files (for older setups, modern tools commit these)
+
+package-lock.json
+
+yarn.lock
+
+===============================================
+
+OS and Editor Specific
+
+===============================================
+
+macOS
+
+.DS_Store
+
+VS Code settings
+
+.vscode/
+!/.vscode/settings.json
+!/.vscode/tasks.json
+!/.vscode/launch.json
+!/.vscode/extensions.json
+.history
+
+Other temp files
+
+*.iml

@@ -1,10 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
+/* ICICI Bank Color Scheme */
 :root {
-  /* ICICI Bank Color Scheme */
   --primary-orange: #ff6b35;
   --primary-orange-light: #ffb84d;
   --primary-orange-dark: #e55100;
@@ -86,7 +84,7 @@
   --sidebar-ring: #ff6b35;
 }
 
-@theme inline {
+.theme-inline {
   --font-sans: "Geist", "Geist Fallback";
   --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-background: var(--background);
@@ -128,35 +126,79 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
+  html, body {
+    height: 100%;
+    margin: 0;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
 /* Custom ICICI Bank Styles */
 .icici-header {
-  @apply bg-primary text-white shadow-lg;
+  background-color: var(--primary);
+  color: var(--neutral-white);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.04);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
 }
 
 .icici-sidebar {
-  @apply bg-white border-r border-neutral-medium-gray;
+  background-color: var(--sidebar);
+  border-right: 1px solid var(--sidebar-border);
 }
 
 .icici-card {
-  @apply bg-white rounded-lg shadow-md border border-neutral-medium-gray hover:shadow-lg transition-shadow;
+  background-color: var(--card);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+  border: 1px solid var(--neutral-medium-gray);
+  transition: box-shadow .15s ease-in-out;
+}
+
+.icici-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.icici-button-primary,
+.icici-button-secondary,
+.icici-button-accent {
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color .15s ease-in-out, color .15s ease-in-out;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
 }
 
 .icici-button-primary {
-  @apply bg-primary hover:bg-primary-dark text-white font-semibold py-2 px-4 rounded-lg transition-colors;
+  background-color: var(--primary);
+  color: var(--neutral-white);
+}
+
+.icici-button-primary:hover {
+  background-color: var(--primary-orange-dark);
 }
 
 .icici-button-secondary {
-  @apply bg-secondary hover:bg-secondary-light text-white font-semibold py-2 px-4 rounded-lg transition-colors;
+  background-color: var(--secondary);
+  color: var(--neutral-white);
+}
+
+.icici-button-secondary:hover {
+  background-color: var(--secondary-burgundy-light);
 }
 
 .icici-button-accent {
-  @apply bg-accent hover:bg-primary-orange-light text-neutral-text font-semibold py-2 px-4 rounded-lg transition-colors;
+  background-color: var(--accent);
+  color: var(--neutral-text);
+}
+
+.icici-button-accent:hover {
+  background-color: var(--primary-orange-light);
 }

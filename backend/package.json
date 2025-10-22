@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "lint": "next lint",
-    "start": "next start"
+     "start": "node server.js",
+     "dev": "nodemon server.js"
   },
   "dependencies": {
     "@hapi/joi": "latest",
@@ -28,11 +26,9 @@
     "http": "latest",
     "jsonwebtoken": "latest",
     "lucide-react": "^0.454.0",
-    "models": "latest",
     "moment": "latest",
     "mongoose": "latest",
     "multer": "latest",
-    "next": "15.2.4",
     "nodemailer": "latest",
     "path": "latest",
     "react": "^19",
@@ -46,7 +42,18 @@
     "tailwindcss-animate": "^1.0.7",
     "tw-animate-css": "latest",
     "uuid": "latest",
-    "xlsx": "latest"
+    "xlsx": "latest",
+    "bcrypt": "^5.1.1",
+    "crypto-js": "^4.2.0",
+    "datauri": "^4.1.0",
+    "express-pino-logger": "^6.0.0",
+    "method-override": "^3.0.0",
+    "multer-gridfs-storage": "^4.2.0",
+    "multer-storage-cloudinary": "^4.0.0",
+    "node": "^23.11.0",
+    "nodemon": "^3.1.9",
+    "pusher": "^4.0.2",
+    "twilio": "^5.5.2"
   },
   "devDependencies": {
     "@types/node": "^22",
