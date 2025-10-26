@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School ERP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "recharts": "https://esm.sh/recharts@2.12.7",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.548.0",
+    "next/": "https://aistudiocdn.com/next@^16.0.0/",
+    "next": "https://aistudiocdn.com/next@^16.0.0",
+    "react-resizable-panels": "https://aistudiocdn.com/react-resizable-panels@^3.0.6",
+    "clsx": "https://aistudiocdn.com/clsx@^2.1.1",
+    "react-day-picker": "https://aistudiocdn.com/react-day-picker@^9.11.1",
+    "@radix-ui/react-tooltip": "https://aistudiocdn.com/@radix-ui/react-tooltip@^1.2.8",
+    "@radix-ui/react-accordion": "https://aistudiocdn.com/@radix-ui/react-accordion@^1.2.12",
+    "@radix-ui/react-context-menu": "https://aistudiocdn.com/@radix-ui/react-context-menu@^2.2.16",
+    "@radix-ui/react-separator": "https://aistudiocdn.com/@radix-ui/react-separator@^1.1.7",
+    "@radix-ui/react-switch": "https://aistudiocdn.com/@radix-ui/react-switch@^1.2.6",
+    "react-redux": "https://aistudiocdn.com/react-redux@^9.2.0",
+    "@radix-ui/react-aspect-ratio": "https://aistudiocdn.com/@radix-ui/react-aspect-ratio@^1.1.7",
+    "@radix-ui/react-toast": "https://aistudiocdn.com/@radix-ui/react-toast@^1.2.15",
+    "@reduxjs/toolkit": "https://aistudiocdn.com/@reduxjs/toolkit@^2.9.2",
+    "@radix-ui/react-alert-dialog": "https://aistudiocdn.com/@radix-ui/react-alert-dialog@^1.1.15",
+    "@radix-ui/react-radio-group": "https://aistudiocdn.com/@radix-ui/react-radio-group@^1.3.8",
+    "@radix-ui/react-dropdown-menu": "https://aistudiocdn.com/@radix-ui/react-dropdown-menu@^2.1.16",
+    "@radix-ui/react-tabs": "https://aistudiocdn.com/@radix-ui/react-tabs@^1.1.13",
+    "@radix-ui/react-menubar": "https://aistudiocdn.com/@radix-ui/react-menubar@^1.1.16",
+    "@radix-ui/react-progress": "https://aistudiocdn.com/@radix-ui/react-progress@^1.1.7",
+    "@radix-ui/react-hover-card": "https://aistudiocdn.com/@radix-ui/react-hover-card@^1.1.15",
+    "axios": "https://aistudiocdn.com/axios@^1.12.2",
+    "vaul": "https://aistudiocdn.com/vaul@^1.1.2",
+    "next-themes": "https://aistudiocdn.com/next-themes@^0.4.6",
+    "@radix-ui/react-collapsible": "https://aistudiocdn.com/@radix-ui/react-collapsible@^1.1.12",
+    "react-hook-form": "https://aistudiocdn.com/react-hook-form@^7.65.0",
+    "@radix-ui/react-label": "https://aistudiocdn.com/@radix-ui/react-label@^2.1.7",
+    "@radix-ui/react-avatar": "https://aistudiocdn.com/@radix-ui/react-avatar@^1.1.10",
+    "sonner": "https://aistudiocdn.com/sonner@^2.0.7",
+    "@radix-ui/react-slot": "https://aistudiocdn.com/@radix-ui/react-slot@^1.2.3",
+    "tailwind-merge": "https://aistudiocdn.com/tailwind-merge@^3.3.1",
+    "@radix-ui/react-toggle": "https://aistudiocdn.com/@radix-ui/react-toggle@^1.1.10",
+    "class-variance-authority": "https://aistudiocdn.com/class-variance-authority@^0.7.1",
+    "embla-carousel-react": "https://aistudiocdn.com/embla-carousel-react@^8.6.0",
+    "@radix-ui/react-scroll-area": "https://aistudiocdn.com/@radix-ui/react-scroll-area@^1.2.10",
+    "input-otp": "https://aistudiocdn.com/input-otp@^1.4.2",
+    "@radix-ui/react-slider": "https://aistudiocdn.com/@radix-ui/react-slider@^1.3.6",
+    "@radix-ui/react-select": "https://aistudiocdn.com/@radix-ui/react-select@^2.2.6",
+    "@radix-ui/react-popover": "https://aistudiocdn.com/@radix-ui/react-popover@^1.1.15",
+    "@radix-ui/react-checkbox": "https://aistudiocdn.com/@radix-ui/react-checkbox@^1.3.3",
+    "cmdk": "https://aistudiocdn.com/cmdk@^1.1.1",
+    "@radix-ui/react-dialog": "https://aistudiocdn.com/@radix-ui/react-dialog@^1.1.15",
+    "@radix-ui/react-toggle-group": "https://aistudiocdn.com/@radix-ui/react-toggle-group@^1.1.11",
+    "@radix-ui/react-navigation-menu": "https://aistudiocdn.com/@radix-ui/react-navigation-menu@^1.2.14",
+    "@vercel/analytics/": "https://aistudiocdn.com/@vercel/analytics@^1.5.0/"
+  }
+}
+</script>
+    <style>
+      :root {
+        --background: #FDFCF9;
+        --card: #FFFBF5;
+        --card-border: #F3EBE2;
+        --primary: #FF6B35;
+        --primary-hover: #E55100;
+        --secondary: #8B3A3A;
+        --text-primary: #3D352E;
+        --text-secondary: #8B7D6B;
+        --table-header: #F3EBE2;
+        --table-row-even: #F9F5F0;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--background);
+        color: var(--text-primary);
+      }
+      /* Custom scrollbar for a more refined look */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #e0d5c9;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #c9b8a9;
+      }
+      /* Recharts Tooltip Customization */
+      .recharts-tooltip-wrapper {
+        outline: none !important;
+      }
+      .recharts-default-tooltip {
+        background-color: var(--card) !important;
+        border: 1px solid var(--card-border) !important;
+        border-radius: 0.75rem !important;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      }
+      .recharts-tooltip-label {
+        color: var(--text-primary) !important;
+        font-weight: 600 !important;
+      }
+      
+      .table-skeleton .skeleton-row {
+        display: grid;
+        grid-template-columns: 0.5fr 2fr 2fr 1fr 1.5fr 1fr;
+        gap: 1rem;
+        padding: 0.75rem 1.5rem;
+        border-bottom: 1px solid var(--card-border);
+      }
+      .table-skeleton .skeleton-row > div {
+        height: 1.25rem;
+        background-color: #F3EBE2;
+        border-radius: 0.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
